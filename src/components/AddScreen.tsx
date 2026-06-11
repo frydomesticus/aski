@@ -6,9 +6,25 @@ interface AddScreenProps {
   onBackToHome: () => void;
   onRefreshData: () => Promise<void>;
   onNavigateToGrid: (category: string, subcategory: string | null) => void;
+  sharedUrl?: string;
+  onClearSharedUrl?: () => void;
 }
 
-export default function AddScreen({ onBackToHome, onRefreshData, onNavigateToGrid }: AddScreenProps) {
+const getCurrentSeason = (): string[] => {
+  const month = new Date().getMonth() + 1; // 1-12
+  if (month === 12 || month === 1 || month === 2) return ["Kış"];
+  if (month >= 3 && month <= 5) return ["İlkbahar"];
+  if (month >= 6 && month <= 8) return ["Yaz"];
+  return ["Sonbahar"];
+};
+
+export default function AddScreen({ 
+  onBackToHome, 
+  onRefreshData, 
+  onNavigateToGrid, 
+  sharedUrl, 
+  onClearSharedUrl 
+}: AddScreenProps) {
   const [mode, setMode] = useState<"menu" | "scraping" | "vision" | "confirm">("menu");
   const [loading, setLoading] = useState(false);
   const [loadingMsg, setLoadingMsg] = useState("");
@@ -27,11 +43,58 @@ export default function AddScreen({ onBackToHome, onRefreshData, onNavigateToGri
     url: "",
     category: "GİYİM" as "GİYİM" | "AYAKKABI" | "AKSESUAR",
     subcategory: "",
-    seasons: [] as string[],
+    seasons: getCurrentSeason(),
     added_price: 1000,
     status: "closet" as ItemStatus,
     image_path: "",
   });
+
+  React.useEffect(() => {
+    if (sharedUrl) {
+      setPastedUrl(sharedUrl);
+      setMode("scraping");
+      
+      const triggerScrape = async () => {
+        setLoading(true);
+        setLoadingMsg("Scraping waterfall executing — extracting schema metadata...");
+        try {
+          const res = await fetch("/api/items/scrape", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url: sharedUrl }),
+          });
+          const data = await res.json();
+          setFormData({
+            name: data.name || "Yeni Gardırop Ürünü",
+            brand: data.brand || "Bilinmeyen Marka",
+            color: data.color || "Siyah",
+            size: data.size || "M",
+            store: data.store || "E-Ticaret Sitesi",
+            url: data.url || sharedUrl,
+            category: (data.category as any) || "GİYİM",
+            subcategory: data.subcategory || "Gömlek",
+            seasons: data.seasons || getCurrentSeason(),
+            added_price: data.added_price || 999,
+            status: "closet",
+            image_path: data.image_path || "linear-gradient(160deg,#3A2E25,#19140F)",
+          });
+          setMode("confirm");
+        } catch (e) {
+          console.error(e);
+          alert("Hızlı çekim başarısız oldu, manuel ekleme moduna geçiliyor.");
+          setMode("confirm");
+        } finally {
+          setLoading(false);
+          setLoadingMsg("");
+          if (onClearSharedUrl) {
+            onClearSharedUrl();
+          }
+        }
+      };
+      
+      triggerScrape();
+    }
+  }, [sharedUrl]);
 
   // Handle URL scraping (Step 1 of Ingest)
   const handleScrapeSubmit = async () => {
@@ -56,7 +119,7 @@ export default function AddScreen({ onBackToHome, onRefreshData, onNavigateToGri
         url: data.url || pastedUrl,
         category: (data.category as any) || "GİYİM",
         subcategory: data.subcategory || "Gömlek",
-        seasons: data.seasons || ["Yaz"],
+        seasons: data.seasons || getCurrentSeason(),
         added_price: data.added_price || 999,
         status: "closet",
         image_path: data.image_path || "linear-gradient(160deg,#3A2E25,#19140F)",

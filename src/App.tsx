@@ -14,6 +14,7 @@ import StatsScreen from "./components/StatsScreen";
 export default function App() {
   const [activeScreen, setActiveScreen] = useState<string>("ana");
   const [extraParam, setExtraParam] = useState<any>(null);
+  const [sharedUrl, setSharedUrl] = useState<string>("");
 
   // Core Db States
   const [items, setItems] = useState<Item[]>([]);
@@ -55,6 +56,34 @@ export default function App() {
 
   useEffect(() => {
     refreshAllData();
+
+    // PWA Share Target URL parser
+    try {
+      const queryParams = new URLSearchParams(window.location.search);
+      const sUrl = queryParams.get("url") || "";
+      const sText = queryParams.get("text") || "";
+      const sTitle = queryParams.get("title") || "";
+
+      let foundUrl = "";
+      const urlRegex = /(https?:\/\/[^\s]+)/gi;
+
+      if (sUrl && sUrl.match(urlRegex)) {
+        foundUrl = sUrl.match(urlRegex)![0];
+      } else if (sText && sText.match(urlRegex)) {
+        foundUrl = sText.match(urlRegex)![0];
+      } else if (sTitle && sTitle.match(urlRegex)) {
+        foundUrl = sTitle.match(urlRegex)![0];
+      }
+
+      if (foundUrl) {
+        // Strip URL queries to avoid loop/refetching on reload
+        window.history.replaceState({}, document.title, window.location.pathname);
+        setSharedUrl(foundUrl);
+        setActiveScreen("ekle");
+      }
+    } catch (e) {
+      console.error("PWA shared URL parsing failed", e);
+    }
   }, []);
 
   // Update Item status (Closet <-> Wishlist <-> Archived)
@@ -252,9 +281,17 @@ export default function App() {
 
           {activeScreen === "ekle" && (
             <AddScreen
-              onBackToHome={() => navigateTo("ana")}
+              onBackToHome={() => {
+                setSharedUrl("");
+                navigateTo("ana");
+              }}
               onRefreshData={refreshAllData}
-              onNavigateToGrid={(cat, sub) => navigateTo("dolap", { category: cat, subcategory: sub })}
+              onNavigateToGrid={(cat, sub) => {
+                setSharedUrl("");
+                navigateTo("dolap", { category: cat, subcategory: sub });
+              }}
+              sharedUrl={sharedUrl}
+              onClearSharedUrl={() => setSharedUrl("")}
             />
           )}
 
