@@ -1,0 +1,415 @@
+{
+  "items": [
+    {
+      "id": "item_1",
+      "name": "Oversize Keten Gömlek",
+      "brand": "Zara",
+      "store": "Zara",
+      "url": "https://www.zara.com/tr/tr/oversize-keten-gomlek-p04313042.html",
+      "image_path": "linear-gradient(160deg,#5B7186,#3C4C5C)",
+      "color": "İndigo",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Gömlek",
+      "seasons": ["İlkbahar", "Yaz"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-05-01T12:00:00.000Z",
+      "added_price": 1220
+    },
+    {
+      "id": "item_2",
+      "name": "Ekose Flanel Gömlek",
+      "brand": "Pull&Bear",
+      "store": "Pull&Bear",
+      "url": "https://www.pullandbear.com/tr/ekose-flanel-gomlek-p07221014.html",
+      "image_path": "repeating-linear-gradient(45deg,#7A8B6F 0 8px,#5C6B53 8px 16px)",
+      "color": "Haki",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Gömlek",
+      "seasons": ["Sonbahar", "Kış"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-04-10T12:00:00.000Z",
+      "added_price": 780
+    },
+    {
+      "id": "item_3",
+      "name": "Baskılı Pamuk T-Shirt",
+      "brand": "H&M",
+      "store": "H&M",
+      "url": "https://www2.hm.com/tr_tr/productpage.1102948001.html",
+      "image_path": "linear-gradient(160deg,#2E2C2A,#191817)",
+      "color": "Siyah",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Tişört & Üst",
+      "seasons": ["Yaz"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-03-15T12:00:00.000Z",
+      "added_price": 449
+    },
+    {
+      "id": "item_4",
+      "name": "Triko Polo Yaka",
+      "brand": "Mango",
+      "store": "Mango",
+      "url": "https://shop.mango.com/tr/erkek/gomlek/triko-polo-yaka-p067210.html",
+      "image_path": "linear-gradient(160deg,#E8E0CE,#CFC4AC)",
+      "color": "Krem",
+      "size": "M",
+      "category": "GİYİM",
+      "subcategory": "Polo Yaka",
+      "seasons": ["İlkbahar", "Yaz"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-06-01T12:00:00.000Z",
+      "added_price": 1150
+    },
+    {
+      "id": "item_5",
+      "name": "Straight Fit Kot",
+      "brand": "Levi's",
+      "store": "Hepsiburada",
+      "url": "https://www.hepsiburada.com/levis-erkek-straight-fit-jean-p-HBC00002A1BF9",
+      "image_path": "linear-gradient(160deg,#46618A,#2C3E59)",
+      "color": "Mavi",
+      "size": "32/32",
+      "category": "GİYİM",
+      "subcategory": "Jean",
+      "seasons": ["İlkbahar", "Sonbahar", "Kış"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-02-10T12:00:00.000Z",
+      "added_price": 949
+    },
+    {
+      "id": "item_6",
+      "name": "Keten Pantolon",
+      "brand": "Zara",
+      "store": "Zara",
+      "url": "https://www.zara.com/tr/tr/keten-pantolon-p04313501.html",
+      "image_path": "linear-gradient(160deg,#D9CDBC,#B5A78F)",
+      "color": "Bej",
+      "size": "32",
+      "category": "GİYİM",
+      "subcategory": "Pantolon",
+      "seasons": ["Yaz"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-05-15T12:00:00.000Z",
+      "added_price": 1190
+    },
+    {
+      "id": "item_7",
+      "name": "Kargo Pantolon",
+      "brand": "H&M",
+      "store": "H&M",
+      "url": "https://www2.hm.com/tr_tr/productpage.1200192003.html",
+      "image_path": "linear-gradient(160deg,#6B6F52,#4A4D39)",
+      "color": "Haki",
+      "size": "32",
+      "category": "GİYİM",
+      "subcategory": "Pantolon",
+      "seasons": ["İlkbahar", "Sonbahar"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-04-05T12:00:00.000Z",
+      "added_price": 899
+    },
+    {
+      "id": "item_8",
+      "name": "Kolej Ceket",
+      "brand": "Bershka",
+      "store": "Bershka",
+      "url": "https://www.bershka.com/tr/kolej-ceket-p052021.html",
+      "image_path": "linear-gradient(160deg,#2B3A5C,#1B2438)",
+      "color": "Lacivert",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Ceket & Mont",
+      "seasons": ["İlkbahar", "Sonbahar"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-03-01T12:00:00.000Z",
+      "added_price": 1790
+    },
+    {
+      "id": "item_9",
+      "name": "Denim Ceket",
+      "brand": "Levi's",
+      "store": "Levi's",
+      "url": "https://www.levis.com.tr/denim-ceket-p051214.html",
+      "image_path": "linear-gradient(160deg,#5A739C,#3A4D6B)",
+      "color": "Mavi",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Ceket & Mont",
+      "seasons": ["İlkbahar", "Sonbahar"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-02-20T12:00:00.000Z",
+      "added_price": 2450
+    },
+    {
+      "id": "item_10",
+      "name": "Yün Kaban",
+      "brand": "Mango",
+      "store": "Mango",
+      "url": "https://shop.mango.com/tr/yun-kaban-p09927.html",
+      "image_path": "linear-gradient(160deg,#C9C2B8,#A39B8F)",
+      "color": "Krem",
+      "size": "L",
+      "category": "GİYİM",
+      "subcategory": "Ceket & Mont",
+      "seasons": ["Sonbahar", "Kış"],
+      "status": "wishlist",
+      "target_price": 3000,
+      "added_at": "2026-01-15T12:00:00.000Z",
+      "added_price": 3890
+    },
+    {
+      "id": "item_11",
+      "name": "Deri Chelsea Bot",
+      "brand": "Trendyol",
+      "store": "Trendyol",
+      "url": "https://www.trendyol.com/trendyol-man/deri-chelsea-bot-p-1849182",
+      "image_path": "linear-gradient(160deg,#3A2E25,#19140F)",
+      "color": "Siyah",
+      "size": "43",
+      "category": "AYAKKABI",
+      "subcategory": "Chelsea Bot",
+      "seasons": ["Sonbahar", "Kış"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-05-14T12:00:00.000Z",
+      "added_price": 2400
+    },
+    {
+      "id": "item_12",
+      "name": "Court Vision Sneaker",
+      "brand": "Nike",
+      "store": "Nike",
+      "url": "https://www.nike.com/tr/court-vision-sneaker-p09281.html",
+      "image_path": "linear-gradient(160deg,#E8E2D2,#B7AE99)",
+      "color": "Bej",
+      "size": "43",
+      "category": "AYAKKABI",
+      "subcategory": "Sneaker",
+      "seasons": ["İlkbahar", "Yaz", "Sonbahar"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-06-09T11:00:00.000Z",
+      "added_price": 2399
+    },
+    {
+      "id": "item_13",
+      "name": "Süet Loafer",
+      "brand": "Zara",
+      "store": "Zara",
+      "url": "https://www.zara.com/tr/tr/suet-loafer-p052021.html",
+      "image_path": "linear-gradient(160deg,#9C6B43,#6E4A2E)",
+      "color": "Taba",
+      "size": "43",
+      "category": "AYAKKABI",
+      "subcategory": "Loafer",
+      "seasons": ["İlkbahar", "Yaz"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-05-01T12:00:00.000Z",
+      "added_price": 1650
+    },
+    {
+      "id": "item_14",
+      "name": "Deri Kemer",
+      "brand": "Zara",
+      "store": "Zara",
+      "url": "https://www.zara.com/tr/tr/deri-kemer-p010210.html",
+      "image_path": "linear-gradient(160deg,#262220,#121110)",
+      "color": "Siyah",
+      "size": "95",
+      "category": "AKSESUAR",
+      "subcategory": "Kemer",
+      "seasons": ["İlkbahar", "Yaz", "Sonbahar", "Kış", "4 Mevsim"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-01-05T12:00:00.000Z",
+      "added_price": 590
+    },
+    {
+      "id": "item_15",
+      "name": "Bere",
+      "brand": "H&M",
+      "store": "H&M",
+      "url": "https://www2.hm.com/tr_tr/productpage.092104.html",
+      "image_path": "linear-gradient(160deg,#4D4D52,#323236)",
+      "color": "Antrasit",
+      "size": "Standart",
+      "category": "AKSESUAR",
+      "subcategory": "Şapka & Bere",
+      "seasons": ["Sonbahar", "Kış"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-01-20T12:00:00.000Z",
+      "added_price": 299
+    },
+    {
+      "id": "item_16",
+      "name": "Analog Saat",
+      "brand": "Casio",
+      "store": "Hepsiburada",
+      "url": "https://www.hepsiburada.com/casio-analog-erkek-kol-saati-p-HBC00122",
+      "image_path": "linear-gradient(160deg,#C9CDD2,#9AA0A8)",
+      "color": "Gümüş",
+      "size": "Standart",
+      "category": "AKSESUAR",
+      "subcategory": "Saat",
+      "seasons": ["İlkbahar", "Yaz", "Sonbahar", "Kış", "4 Mevsim"],
+      "status": "closet",
+      "target_price": null,
+      "added_at": "2026-01-02T12:00:00.000Z",
+      "added_price": 1450
+    },
+    {
+      "id": "item_17",
+      "name": "Deri Postal",
+      "brand": "Trendyol",
+      "store": "Trendyol",
+      "url": "https://www.trendyol.com/postal-bot-p-1290",
+      "image_path": "linear-gradient(160deg,#2E2C2A,#191817)",
+      "color": "Siyah",
+      "size": "43",
+      "category": "AYAKKABI",
+      "subcategory": "Bot",
+      "seasons": ["Kış"],
+      "status": "wishlist",
+      "target_price": 2500,
+      "added_at": "2026-04-01T12:00:00.000Z",
+      "added_price": 3100
+    },
+    {
+      "id": "item_18",
+      "name": "Selvedge Kot",
+      "brand": "Levi's",
+      "store": "Levi's",
+      "url": "https://www.levis.com.tr/selvedge-jeans-p-55",
+      "image_path": "linear-gradient(160deg,#5A739C,#3A4D6B)",
+      "color": "Lacivert",
+      "size": "32/32",
+      "category": "GİYİM",
+      "subcategory": "Jean",
+      "seasons": ["İlkbahar", "Yaz", "Sonbahar", "Kış"],
+      "status": "wishlist",
+      "target_price": 3000,
+      "added_at": "2026-03-20T12:00:00.000Z",
+      "added_price": 3290
+    }
+  ],
+  "price_history": [
+    {
+      "id": "ph_1_1",
+      "item_id": "item_1",
+      "price": 1220,
+      "checked_at": "2026-05-01T12:00:00.000Z"
+    },
+    {
+      "id": "ph_1_2",
+      "item_id": "item_1",
+      "price": 1290,
+      "checked_at": "2026-06-02T04:00:00.000Z"
+    },
+    {
+      "id": "ph_11_1",
+      "item_id": "item_11",
+      "price": 2400,
+      "checked_at": "2026-05-14T12:00:00.000Z"
+    },
+    {
+      "id": "ph_11_2",
+      "item_id": "item_11",
+      "price": 1899,
+      "checked_at": "2026-06-11T04:00:00.000Z"
+    },
+    {
+      "id": "ph_12_1",
+      "item_id": "item_12",
+      "price": 2399,
+      "checked_at": "2026-06-09T11:00:00.000Z"
+    },
+    {
+      "id": "ph_12_2",
+      "item_id": "item_12",
+      "price": 2110,
+      "checked_at": "2026-06-11T04:00:00.000Z"
+    },
+    {
+      "id": "ph_10_1",
+      "item_id": "item_10",
+      "price": 3890,
+      "checked_at": "2026-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "ph_10_2",
+      "item_id": "item_10",
+      "price": 3290,
+      "checked_at": "2026-06-11T04:00:00.000Z"
+    }
+  ],
+  "outfits": [
+    {
+      "id": "outfit_1",
+      "name": "Yazlık Keten Görünüm",
+      "created_at": "2026-06-01T10:00:00.000Z"
+    },
+    {
+      "id": "outfit_2",
+      "name": "Sokak Stili",
+      "created_at": "2026-06-02T11:00:00.000Z"
+    },
+    {
+      "id": "outfit_3",
+      "name": "Akşam Buluşması",
+      "created_at": "2026-06-03T18:00:00.000Z"
+    },
+    {
+      "id": "outfit_4",
+      "name": "Ofis Şıklığı",
+      "created_at": "2026-06-04T09:00:00.000Z"
+    },
+    {
+      "id": "outfit_5",
+      "name": "Kışlık Günlük",
+      "created_at": "2025-12-15T12:00:00.000Z"
+    },
+    {
+      "id": "outfit_6",
+      "name": "Cuma Gecesi",
+      "created_at": "2026-06-05T20:00:00.000Z"
+    }
+  ],
+  "outfit_items": [
+    {
+      "outfit_id": "outfit_1",
+      "item_id": "item_1",
+      "slot": "ÜST GİYİM"
+    },
+    {
+      "outfit_id": "outfit_1",
+      "item_id": "item_6",
+      "slot": "ALT GİYİM"
+    },
+    {
+      "outfit_id": "outfit_1",
+      "item_id": "item_13",
+      "slot": "AYAKKABI"
+    },
+    {
+      "outfit_id": "outfit_1",
+      "item_id": "item_14",
+      "slot": "AKSESUAR"
+    }
+  ],
+  "wear_log": []
+}

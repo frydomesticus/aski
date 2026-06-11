@@ -1,0 +1,6 @@
+{
+  "name": "ASKI",
+  "description": "Kişisel Gardırop ve Dolap Yönetimi Uygulaması",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
