@@ -4,8 +4,7 @@ import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
-import sqlite3 from "sqlite3";
-import { open, Database } from "sqlite";
+import { createClient } from "@libsql/client";
 
 dotenv.config();
 
@@ -16,20 +15,34 @@ app.use(express.json({ limit: "20mb" }));
 
 let db: any;
 
+let client: any;
+
 async function initDb() {
-  const dataDir = process.env.VERCEL 
-    ? "/tmp" 
-    : path.join(process.cwd(), "data");
+  const url = process.env.TURSO_DATABASE_URL || "file:data/aski.db";
+  const authToken = process.env.TURSO_AUTH_TOKEN;
 
-  if (!process.env.VERCEL && !fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
-  }
-
-  const dbFile = path.join(dataDir, "aski.db");
-  db = await open({
-    filename: dbFile,
-    driver: sqlite3.Database
+  client = createClient({
+    url,
+    authToken
   });
+
+  db = {
+    async all(sql: string, params: any[] = []) {
+      const res = await client.execute({ sql, args: params });
+      return res.rows;
+    },
+    async get(sql: string, params: any[] = []) {
+      const res = await client.execute({ sql, args: params });
+      return res.rows[0] || null;
+    },
+    async run(sql: string, params: any[] = []) {
+      const res = await client.execute({ sql, args: params });
+      return {
+        lastID: res.lastInsertRowid ? String(res.lastInsertRowid) : undefined,
+        changes: Number(res.rowsAffected)
+      };
+    }
+  };
 
   // Enable foreign keys
   await db.run("PRAGMA foreign_keys = ON;");
