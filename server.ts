@@ -17,8 +17,11 @@ app.use(express.json({ limit: "20mb" }));
 let db: any;
 
 async function initDb() {
-  const dataDir = path.join(process.cwd(), "data");
-  if (!fs.existsSync(dataDir)) {
+  const dataDir = process.env.VERCEL 
+    ? "/tmp" 
+    : path.join(process.cwd(), "data");
+
+  if (!process.env.VERCEL && !fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }
 
@@ -1355,4 +1358,9 @@ async function startServer() {
   });
 }
 
-startServer();
+// Export app for serverless deployment (Vercel)
+export default app;
+
+if (!process.env.VERCEL) {
+  startServer();
+}
